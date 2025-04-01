@@ -18,9 +18,9 @@ export function Timeline({ items }: TimelineProps) {
       {items.map((item, index) => (
         <div key={index} className="mb-8 pl-4">
           <h3 className="text-lg font-semibold">{item.title}</h3>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">{item.company}</p>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">{item.dateRange}</p>
-          <ul className="mt-2 list-disc list-inside text-sm text-zinc-600 dark:text-zinc-500">
+          <p className=" text-zinc-600 dark:text-zinc-400">{item.company}</p>
+          <p className=" text-zinc-600 dark:text-zinc-400">{item.dateRange}</p>
+          <ul className="mt-2 list-disc list-inside text-zinc-600 dark:text-zinc-500 text-sm">
             {item.skills.map((skill, i) => (
               <li key={i}>{skill}</li>
             ))}

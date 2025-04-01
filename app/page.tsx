@@ -18,10 +18,13 @@ import {
   BLOG_POSTS,
   TECHNOLOGIES,
   EMAIL,
+  PHONE,
   SOCIAL_LINKS,
+  EDUCATION,
 } from './data'
 import { Timeline } from '@/components/ui/TimeLine'
 import { TechnologiesGrid } from '@/components/ui/TechnologiesGrid'
+import { Education } from '@/components/ui/Education'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -143,6 +146,13 @@ export default function Personal() {
             Focused on creating intuitive and performant web experiences.
             Bridging the gap between design and development.
           </p>
+          <p className="text-zinc-600 dark:text-zinc-400 mt-2">
+            As an developer, I thrive on identifying unique challenges and
+            building innovative, scalable solutions. My ventures include
+            developing apps and platforms that address real-world problems,
+            combining technical expertise with a vision for impactful,
+            user-centric products.
+          </p>
         </div>
       </motion.section>
 
@@ -194,7 +204,17 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+        <h3 className="mb-5 text-lg font-medium">Education</h3>
+        <div className="flex flex-col space-y-2">
+          <Education items={EDUCATION} />
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Experience</h3>
         <div className="flex flex-col space-y-2">
           <Timeline items={WORK_EXPERIENCE} />
         </div>
@@ -245,6 +265,10 @@ export default function Personal() {
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
+          </a>
+          {' '} or at{' '}
+          <a className='underline dark:text-zinc-300' href={`tel:${PHONE}`}>
+            1-780-880-8416
           </a>
         </p>
         <div className="flex items-center justify-start space-x-3">

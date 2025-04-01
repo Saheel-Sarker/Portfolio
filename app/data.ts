@@ -52,7 +52,7 @@ export const TECHNOLOGIES: technology[] = [
   },
   {
     name: 'SQL',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    logo: 'https://www.svgrepo.com/show/341068/sql.svg',
   },
   {
     name: 'Python',
@@ -76,7 +76,7 @@ export const TECHNOLOGIES: technology[] = [
   },
   {
     name: '.NET',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg',
   },
   {
     name: 'Angular',
@@ -215,6 +215,26 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/ibelick',
   },
+  {
+    label: 'Email',
+    link: 'saheel@ualberta.ca',
+  },
+  {
+    label: 'Phone',
+    link: '17808808416',
+  },
+]
+
+export const EDUCATION = [
+  {
+    degree: 'Bachelor of Science in Computer Science ',
+    minor: 'Mathematics',
+    institution: 'University of Alberta',
+    dateRange: 'September 2019 - April 2024',
+    description:
+      'Specialized in Software Engineering and Artificial Intelligence.',
+  },
 ]
 
 export const EMAIL = 'saheel@ualberta.ca'
+export const PHONE = '+17808808416'
