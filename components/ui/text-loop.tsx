@@ -24,7 +24,7 @@ export function TextLoop({
   children,
   className,
   interval = 2,
-  transition = { duration: 0.3 },
+  transition = { duration: 0.4 },
   variants,
   onIndexChange,
   trigger = true,

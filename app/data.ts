@@ -1,3 +1,6 @@
+import {Github, Mail, Phone, Linkedin} from 'lucide-react'
+import React from 'react'
+
 type TimelineItem = {
   title: string
   company: string
@@ -24,7 +27,8 @@ type BlogPost = {
 }
 
 type SocialLink = {
-  label: string
+  label: string 
+  logo?: React.ReactNode // Icon component
   link: string
 }
 
@@ -92,7 +96,7 @@ export const TECHNOLOGIES: technology[] = [
   },
   {
     name: 'Node.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    logo: 'https://www.svgrepo.com/show/452075/node-js.svg',
   },
   {
     name: 'Express.js',
@@ -208,19 +212,23 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: 'Github',
-    link: 'https://github.com/ibelick',
+    label: 'GitHub',
+    logo: React.createElement(Github, { size: 24 }),
+    link: 'https://github.com/saheel-sarker',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    logo: React.createElement(Linkedin, { size: 24 }),
+    link: 'https://www.linkedin.com/in/saheels',
   },
   {
     label: 'Email',
+    logo: React.createElement(Mail, { size: 24 }),
     link: 'saheel@ualberta.ca',
   },
   {
     label: 'Phone',
+    logo: React.createElement(Phone, { size: 24 }),
     link: '17808808416',
   },
 ]
@@ -230,7 +238,7 @@ export const EDUCATION = [
     degree: 'Bachelor of Science in Computer Science ',
     minor: 'Mathematics',
     institution: 'University of Alberta',
-    dateRange: 'September 2019 - April 2024',
+    dateRange: 'September 2018 - November 2023',
     description:
       'Specialized in Software Engineering and Artificial Intelligence.',
   },

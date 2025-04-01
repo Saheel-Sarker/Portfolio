@@ -25,6 +25,7 @@ import {
 import { Timeline } from '@/components/ui/TimeLine'
 import { TechnologiesGrid } from '@/components/ui/TechnologiesGrid'
 import { Education } from '@/components/ui/Education'
+import { Tooltip } from 'react-tooltip'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -98,18 +99,24 @@ function ProjectVideo({ src }: ProjectVideoProps) {
 function MagneticSocialLink({
   children,
   link,
+  label
 }: {
   children: React.ReactNode
   link: string
+  label: string
 }) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
-        href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+        target={label !== 'Phone' && label !== 'Email' ? '_blank' : undefined}
+        href={label === 'Phone' ? `tel:${link}` : (label === 'Email' ? `mailto:${link}` : link)}
+        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 w-10 h-10 justify-center"
+        data-tooltip-id={label}
+        data-tooltip-content={label}
       >
         {children}
-        <svg
+        <Tooltip id={label} place='bottom'></Tooltip>
+        {/* <svg
           width="15"
           height="15"
           viewBox="0 0 15 15"
@@ -123,7 +130,7 @@ function MagneticSocialLink({
             fillRule="evenodd"
             clipRule="evenodd"
           ></path>
-        </svg>
+        </svg> */}
       </a>
     </Magnetic>
   )
@@ -262,19 +269,16 @@ export default function Personal() {
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
-            {EMAIL}
-          </a>
-          {' '} or at{' '}
-          <a className='underline dark:text-zinc-300' href={`tel:${PHONE}`}>
-            1-780-880-8416
-          </a>
+          Feel free to contact me!
         </p>
         <div className="flex items-center justify-start space-x-3">
           {SOCIAL_LINKS.map((link) => (
-            <MagneticSocialLink key={link.label} link={link.link}>
-              {link.label}
+            // <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
+            //   {link.logo}
+            // </Magnetic>
+
+            <MagneticSocialLink key={link.label} link={link.link} label={link.label}>
+              {link.logo}
             </MagneticSocialLink>
           ))}
         </div>

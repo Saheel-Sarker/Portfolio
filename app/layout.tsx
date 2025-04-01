@@ -5,6 +5,8 @@ import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 
+import { ScrollProgress } from '@/components/ui/scroll-progress'
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -34,9 +36,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+
       <body
         className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
+        <ScrollProgress
+          className="fixed top-0 z-20 h-1 bg-gray-300 dark:bg-zinc-600"
+          springOptions={{
+          bounce: 0,
+          }}
+        />
         <ThemeProvider
           enableSystem={true}
           attribute="class"

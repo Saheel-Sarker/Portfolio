@@ -2,6 +2,7 @@
 import { TextEffect } from '@/components/ui/text-effect'
 import { TextLoop } from '@/components/ui/text-loop'
 import Link from 'next/link'
+import { TypeAnimation } from 'react-type-animation'
 
 export function Header() {
   return (
@@ -18,26 +19,16 @@ export function Header() {
               Saheel Sarker
           </TextEffect>
         </Link>
-        <TextLoop>
-          <TextEffect
-            as="p"
-            preset="fade"
-            per="char"
-            className="text-zinc-600 dark:text-zinc-500"
-            delay={0.5}
-          >
-            Full Stack Developer
-          </TextEffect>
-          <TextEffect
-            as="p"
-            preset="fade"
-            per="char"
-            className="text-zinc-600 dark:text-zinc-500"
-            delay={0.5}
-          >
-            Web Developer
-          </TextEffect>
-        </TextLoop>
+        <TypeAnimation 
+        sequence={['Software Developer', 1000, 'Frontend Developer', 1000, 'Backend Developer', 1000, 'Cloud Architect', 1000, () => {
+          console.log('Sequence completed');
+        },]} 
+        wrapper='span'
+        cursor={true}
+        repeat={Infinity}
+        className='text-zinc-600 dark:text-zinc-500'
+        />
+        
       </div>
     </header>
   )
