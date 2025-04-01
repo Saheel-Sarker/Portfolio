@@ -169,7 +169,7 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
     title: 'Founder & Lead Software Developer',
     company: 'Seqr Safe',
     dateRange: 'November 2024 - Present',
-    skills: ['Leadership', 'Product Design', 'Business Strategy'],
+    skills: ['Leadership', 'Product Design', 'Business Strategy', 'Technologies: JavaScript, Next, Node.js, Mongodb, Express.js, TailwindCSS, Stripe'],
     link: 'https://seqr-safe.com/',
     id: 'work1',
   },
@@ -178,7 +178,7 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
     title: 'Freelance Software Developer',
     company: 'Upwork',
     dateRange: 'February 2024 - November 2024',
-    skills: ['JavaScript', 'CSS', 'HTML'],
+    skills: ['Client Management', 'Project Management','Technologies: JavaScript, TypeScript, React, Angular, AWS, Terrraform, SQL, MS SQL Server'],
     id: 'work2',
   },
 ]
