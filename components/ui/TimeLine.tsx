@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { TextShimmer } from '../motion-primitives/text-shimmer'
+import { Disclosure, DisclosureContent, DisclosureTrigger } from '../motion-primitives/disclosure'
 
 export type TimelineItem = {
   title: string
@@ -14,25 +16,38 @@ export type TimelineProps = {
 
 export function Timeline({ items }: TimelineProps) {
   return (
-    <div className="relative border-l border-gray-300">
+    <div className="relative ">
+      
       {items.map((item, index) => (
-        <div key={index} className="mb-8 pl-4">
-          <h3 className="text-lg font-semibold">{item.title}</h3>
+        
+        <Disclosure key={index} className="pb-8 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 hover:border-black dark:hover:border-white group transition-colors">
+          <DisclosureTrigger>
+            <div className='cursor-pointer'>
+                    <div className='absolute -left-0'>
+            <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-white group-hover:bg-black transition-colors'></div>
+          </div>
+          <h3 className="text-zinc-600 dark:text-zinc-400 font-[450] font-base group-hover:text-zinc-950 dark:group-hover:text-zinc-50 transition-colors">{item.title}</h3>
+          <div className='flex justify-between'>
           <p className=" text-zinc-600 dark:text-zinc-400">{item.company}</p>
           <p className=" text-zinc-600 dark:text-zinc-400">{item.dateRange}</p>
-          <ul className="mt-2 list-disc list-inside text-zinc-600 dark:text-zinc-500">
+          </div>
+          </div>
+          </DisclosureTrigger>
+          <DisclosureContent>
+          <ul className="mt-2 list-disc list-inside text-zinc-600 dark:text-zinc-400">
             {item.skills.map((skill, i) => (
               <li key={i}>{skill}</li>
             ))}
           </ul>
-
           {item.link && (
-             <li className='relative dark:text-zinc-400 dark:hover:text-blue-600 text:zinc-900 hover:text-blue-500 transition-colors duration-100'>
+             <li className='relative text-zinc-600 dark:text-zinc-400 dark:hover:text-blue-500 text:zinc-900 hover:text-blue-400 transition-colors duration-100 group/link'>
                 <Link
                   href={item.link}
                   className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full underline underline-offset-3"
                 >
+                  <div className='text-zinc-600 dark:text-zinc-400 dark:group-hover/link:text-blue-500 text:zinc-900 group-hover/link:text-blue-400'>
                   Link
+                  </div>
                   <svg
                   width="15"
                   height="15"
@@ -50,8 +65,10 @@ export function Timeline({ items }: TimelineProps) {
                 </svg> 
                 </Link>
                 </li>
+                
               )}
-        </div>
+              </DisclosureContent>
+        </Disclosure>
       ))}
   </div>
   )

@@ -6,6 +6,8 @@ import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 
 import { ScrollProgress } from '@/components/ui/scroll-progress'
+import { Cursor } from '@/components/motion-primitives/cursor'
+import {motion} from 'motion/react'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -53,6 +55,9 @@ export default function RootLayout({
           defaultTheme="system"
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+            <Cursor >
+              <div className='w-2 h-2 rounded-full bg-gray-500/40 backdrop-blur-md dark:bg-gray-300/40'></div>
+            </Cursor>
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
               <Header />
               {children}

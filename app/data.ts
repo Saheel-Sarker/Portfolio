@@ -138,33 +138,33 @@ export const TECHNOLOGIES: technology[] = [
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Your Scribe',
     description:
-      'Advanced components and templates to craft beautiful websites.',
+      'Audio Transcriber and Translator powered by AI.',
     link: 'https://pro.motion-primitives.com/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project1',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', "Xenova"],
   },
   {
-    name: 'Motion Primitivesasdas Pro',
+    name: 'ExpenseApp',
     description:
-      'Advanced components and templates to craft beautiful websites.',
+      'Budget Tracker that uses AI to analyze data, create analytics, and forcast finances.',
     link: 'https://pro.motion-primitives.com/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project3',
-    technologies: ['Next.js', 'Framer Motion'],
+    technologies: ['.NET', 'C#', 'MS SQL Server', "Bootstrap", ],
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
+    name: 'Meal Tracker',
+    description: 'Meal planner that let\'s that simplifies dieting',
     link: 'https://motion-primitives.com/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
-    technologies: ['JavaScript', 'CSS', 'HTML'],
+    technologies: ['Java', 'Android API', 'Firebase', 'XML'],
   },
 ]
 
@@ -172,7 +172,7 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
   {
     title: 'Founder & Lead Software Developer',
     company: 'Seqr Safe',
-    dateRange: 'November 2024 - Present',
+    dateRange: 'Nov 2024 - Present',
     skills: ['Leadership', 'Product Design', 'Business Strategy', 'Technologies: JavaScript, Next, Node.js, Mongodb, Express.js, TailwindCSS, Stripe'],
     link: 'https://seqr-safe.com/',
     id: 'work1',
@@ -181,8 +181,8 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
   {
     title: 'Freelance Software Developer',
     company: 'Upwork',
-    dateRange: 'February 2024 - November 2024',
-    skills: ['Client Management', 'Project Management','Technologies: JavaScript, TypeScript, React, Angular, AWS, Terrraform, SQL, MS SQL Server'],
+    dateRange: 'Feb 2024 - Nov 2024',
+    skills: ['Client Management', 'Project Management','Technologies: JavaScript, TypeScript, React, Angular, AWS, Terrraform, SQL, MS SQL'],
     id: 'work2',
   },
 ]
@@ -235,10 +235,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const EDUCATION = [
   {
-    degree: 'Bachelor of Science in Computer Science ',
+    degree: 'Bachelor\'s in Computer Science',
     minor: 'Mathematics',
     institution: 'University of Alberta',
-    dateRange: 'September 2018 - November 2023',
+    dateRange: 'Sept 2018 - Nov 2023',
     description:
       'Specialized in Software Engineering and Artificial Intelligence.',
   },

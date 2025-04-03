@@ -26,6 +26,7 @@ import { Timeline } from '@/components/ui/TimeLine'
 import { TechnologiesGrid } from '@/components/ui/TechnologiesGrid'
 import { Education } from '@/components/ui/Education'
 import { Tooltip } from 'react-tooltip'
+import { Disclosure, DisclosureContent, DisclosureTrigger } from '@/components/motion-primitives/disclosure'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -109,7 +110,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         target={label !== 'Phone' && label !== 'Email' ? '_blank' : undefined}
-        href={label === 'Phone' ? `tel:${link}` : (label === 'Email' ? `mailto:${link}` : link)}
+        href={label === 'Phone' ? `tel:${PHONE}` : (label === 'Email' ? `mailto:${EMAIL}` : link)}
         className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 w-10 h-10 justify-center"
         data-tooltip-id={label}
         data-tooltip-content={label}
@@ -183,9 +184,11 @@ export default function Personal() {
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                 <ProjectVideo src={project.video} />
               </div>
-              <div className="px-1">
+              <Disclosure className="px-1">
+                <DisclosureTrigger>
+                <div className='cursor-pointer'>
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50 hover:underline underline-offset-2"
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -196,12 +199,17 @@ export default function Personal() {
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
-                <ul className="mt-2 list-disc list-inside text-sm text-zinc-600 dark:text-zinc-400">
+                </div>
+                </DisclosureTrigger>
+                <DisclosureContent>
+                <ul className="mt-2 list-disc list-inside text-zinc-600 dark:text-zinc-400">
                   {project.technologies?.map((tech, index) => (
                     <li key={index}>{tech}</li>
                   ))}
                 </ul>
-              </div>
+                
+                </DisclosureContent>
+              </Disclosure>
             </div>
           ))}
         </div>
@@ -222,46 +230,10 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Experience</h3>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 ">
           <Timeline items={WORK_EXPERIENCE} />
         </div>
       </motion.section>
-
-      {/* <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
-        </div>
-      </motion.section> */}
 
       <motion.section
         variants={VARIANTS_SECTION}
@@ -269,7 +241,15 @@ export default function Personal() {
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me!
+          Feel free to contact me at{' '}
+            <a className="underline dark:text-zinc-300 underline-offset-1" href={`mailto:${EMAIL}`}>
+              {EMAIL}
+            </a>
+          {' '} or {' '}
+          <a className="underline dark:text-zinc-300" href={`tel:${PHONE}`}>
+              1-780-880-8416
+            </a>
+          {' '} or the other ways below. I'd love a chance to connect with other like minded individuals.
         </p>
         <div className="flex items-center justify-start space-x-3">
           {SOCIAL_LINKS.map((link) => (
