@@ -12,7 +12,7 @@ import { loadSlim } from "@tsparticles/slim"; // Slim version for smaller bundle
 
 export function Fireflies() {
   const [init, setInit] = useState(false);
-  const count= window.innerWidth < 640 ? 10 : 20; // Default particle count
+  const count= window.innerWidth < 640 ? 20 : 30; // Default particle count
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -28,6 +28,7 @@ export function Fireflies() {
 
   const options: ISourceOptions = useMemo(
     () => ({
+      fullScreen: { enable: false },
       background: {
         color: { value: "transparent" },
       },
@@ -93,7 +94,7 @@ export function Fireflies() {
   );
   
   if (init) {
-    return <Particles id="fireflies" particlesLoaded={particlesLoaded} options={options} />;
+    return <Particles id="fireflies" particlesLoaded={particlesLoaded} options={options} className="absolute inset-0 w-full h-full pointer-events-none"/>;
   }
 
   return null;
