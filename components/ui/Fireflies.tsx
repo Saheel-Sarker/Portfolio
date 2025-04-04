@@ -48,7 +48,7 @@ export function Fireflies() {
         },
       },
       particles: {
-        color: { value: "#00008b" },
+        color: { value: "#5B1166" },
         move: {
           enable: true,
           speed: 0.5, // Slower movement for floating effect
