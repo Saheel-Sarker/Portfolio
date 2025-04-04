@@ -41,7 +41,7 @@ export function Fireflies() {
           push: { quantity: 1 },
           repulse: { distance: 100, duration: 1 },
           grab: { distance: 150, links: { opacity: 0.5 } },
-          attract: { distance: 125, duration: 0., factor: 2 },
+          attract: { distance: 125, duration: 0.1, factor: 1 },
           bubble: { distance: 125, size: 6, duration: 1 },
           trail: { delay: 0.1, quantity: 5, length: 10 },
         },
@@ -50,8 +50,8 @@ export function Fireflies() {
         color: { value: "#fff" },
         move: {
           enable: true,
-          speed: 0.3, // Slower movement for floating effect
-          random: true, // Adds variation to motion
+          speed: 0.5, // Slower movement for floating effect
+          random: false, // Adds variation to motion
           straight: false,
           direction: "none",
           outModes: {
@@ -59,12 +59,6 @@ export function Fireflies() {
           },
           attract: {
             enable: false, // Disabling this makes movement more fluid
-          },
-          path: {
-            enable: true,
-            options: {
-              type: "sinusoidal", // Creates a wavy floating motion
-            },
           },
         },
         number: {
@@ -97,9 +91,6 @@ export function Fireflies() {
     []
   );
   
-  
-  
-
   if (init) {
     return <Particles id="fireflies" particlesLoaded={particlesLoaded} options={options} />;
   }
