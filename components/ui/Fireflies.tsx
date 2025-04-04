@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { use, useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
@@ -12,7 +12,7 @@ import { loadSlim } from "@tsparticles/slim"; // Slim version for smaller bundle
 
 export function Fireflies() {
   const [init, setInit] = useState(false);
-  const count= window.innerWidth < 640 ? 20 : 30; // Default particle count
+  const count= 30 // Default particle count
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
