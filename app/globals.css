@@ -22,6 +22,19 @@
 
 @theme {
   --color-tan: #e9d5a1;
-}
 
+  --animate-wiggle: wiggle 1.5s infinite;
+  @keyframes wiggle {
+    0% {
+      opacity: 1;
+    },
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.75;
+    }
+  }
+
+}
 

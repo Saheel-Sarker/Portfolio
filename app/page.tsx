@@ -202,7 +202,7 @@ export default function Personal() {
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </Link>
-                <p className="text-base text-zinc-600 dark:text-zinc-400 hover:dark:text-zinc-50 hover:text-zinc-950">
+                <p className="text-base text-zinc-600 dark:text-zinc-400 hover:dark:text-zinc-50 hover:text-zinc-950 animate-wiggle hover:animate-none">
                   {project.description}
                 </p>
                 </div>

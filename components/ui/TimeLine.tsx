@@ -21,15 +21,15 @@ export function Timeline({ items }: TimelineProps) {
       {items.map((item, index) => (
         <Disclosure key={index} className="pb-8 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 transition-colors">
           <DisclosureTrigger>
-          <div className='group'>
+          <div className='group '>
           <div className=''>
             <div className='absolute -left-0'>
             <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-50 group-hover:bg-zinc-950 group-hover:h-[2px] transition-colors'></div>
           </div>
           <h3 className="font-[450] font-base text-zinc-950 dark:text-zinc-50">{item.title}</h3>
           <div className='flex justify-between'>
-          <p className=" text-zinc-600 dark:text-zinc-400 group-hover:dark:text-zinc-50 group-hover:text-zinc-950">{item.company}</p>
-          <p className=" text-zinc-600 dark:text-zinc-400 group-hover:dark:text-zinc-50 group-hover:text-zinc-950">{item.dateRange}</p>
+          <p className=" text-zinc-600 dark:text-zinc-400 group-hover:dark:text-zinc-50 group-hover:text-zinc-950 animate-wiggle group-hover:animate-none">{item.company}</p>
+          <p className=" text-zinc-600 dark:text-zinc-400 group-hover:dark:text-zinc-50 group-hover:text-zinc-950 animate-wiggle group-hover:animate-none">{item.dateRange}</p>
           </div>
           </div>
           </div>
