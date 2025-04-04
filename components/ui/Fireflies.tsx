@@ -12,7 +12,8 @@ import { loadSlim } from "@tsparticles/slim"; // Slim version for smaller bundle
 
 export function Fireflies() {
   const [init, setInit] = useState(false);
-  const particleCount = () => {
+  const count = 20; // Default particle count
+  function particleCount(){
     if (window.innerWidth < 640) {
       return 10; // Mobile
     }
@@ -23,6 +24,7 @@ export function Fireflies() {
   }; // Adjust the number of particles here
 
   useEffect(() => {
+    const count = particleCount();
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
@@ -71,7 +73,7 @@ export function Fireflies() {
           },
         },
         number: {
-          value: particleCount(), // Adjust the number of particles here
+          value: count, // Adjust the number of particles here
           density: {
             enable: true,
             area: 800,

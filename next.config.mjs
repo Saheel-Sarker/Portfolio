@@ -6,7 +6,9 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
     domains: ['images.unsplash.com', 'cdn.pixabay.com', 'cdn.shopify.com', 'res.cloudinary.com', 'upload.wikimedia.org','cdn.jsdelivr.net'],
-  }
+  },
+  output: 'export',
+  basePath: "/Portfolio",
 };
 
 const withMDX = createMDX({

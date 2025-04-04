@@ -187,7 +187,7 @@ export default function Personal() {
                 <img
                   src={project.thumbnail}
                   alt={project.name}
-                  className="w-full rounded-xl object-cover">
+                  className="w-full rounded-xl object-cover ">
                   </img>
               </div>
               <Disclosure className="px-1">
