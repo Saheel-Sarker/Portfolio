@@ -173,6 +173,7 @@ export default function Personal() {
             <TechnologiesGrid technologies={TECHNOLOGIES} />
         </AnimatedBackground>
       </motion.section>
+
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -182,7 +183,12 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.id} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+                {/* <ProjectVideo src={project.video} /> */}
+                <img
+                  src={project.thumbnail}
+                  alt={project.name}
+                  className="w-full rounded-xl object-cover">
+                  </img>
               </div>
               <Disclosure className="px-1">
                 <DisclosureTrigger>
