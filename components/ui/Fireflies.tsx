@@ -12,18 +12,9 @@ import { loadSlim } from "@tsparticles/slim"; // Slim version for smaller bundle
 
 export function Fireflies() {
   const [init, setInit] = useState(false);
-  const [count, setCount] = useState(20); // Default particle count
-  function particleCount(){
-    if (window.innerWidth < 640) {
-      setCount(10); // Mobile
-    }
-    else {
-      setCount(20); // Large Desktop
-    }
-  }; // Adjust the number of particles here
+  const count= window.innerWidth < 640 ? 10 : 20; // Default particle count
 
   useEffect(() => {
-    particleCount();
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
@@ -57,7 +48,7 @@ export function Fireflies() {
         },
       },
       particles: {
-        color: { value: "#fff" },
+        color: { value: "#00008b" },
         move: {
           enable: true,
           speed: 0.5, // Slower movement for floating effect
@@ -92,7 +83,7 @@ export function Fireflies() {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 1 },
+          value: 4,
           random: true,
         },
       },
