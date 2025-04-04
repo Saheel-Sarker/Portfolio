@@ -108,7 +108,7 @@ function MagneticSocialLink({
 }) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
-      <a
+      <Link
         target={label !== 'Phone' && label !== 'Email' ? '_blank' : undefined}
         href={label === 'Phone' ? `tel:${PHONE}` : (label === 'Email' ? `mailto:${EMAIL}` : link)}
         className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 w-10 h-10 justify-center"
@@ -132,7 +132,7 @@ function MagneticSocialLink({
             clipRule="evenodd"
           ></path>
         </svg> */}
-      </a>
+      </Link>
     </Magnetic>
   )
 }
@@ -186,17 +186,17 @@ export default function Personal() {
               </div>
               <Disclosure className="px-1">
                 <DisclosureTrigger>
-                <div className='cursor-pointer'>
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50 hover:underline underline-offset-2"
+                <div className=''>
+                <Link
+                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50 hover:underline underline-offset-2 cursor-none"
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                </Link>
+                <p className="text-base text-zinc-600 dark:text-zinc-400 hover:dark:text-zinc-50 hover:text-zinc-950">
                   {project.description}
                 </p>
                 </div>
@@ -242,13 +242,13 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
-            <a className="underline dark:text-zinc-300 underline-offset-1" href={`mailto:${EMAIL}`}>
+            <Link className="underline dark:text-zinc-300 underline-offset-1" href={`mailto:${EMAIL}`}>
               {EMAIL}
-            </a>
+            </Link>
           {' '} or {' '}
-          <a className="underline dark:text-zinc-300" href={`tel:${PHONE}`}>
+          <Link className="underline dark:text-zinc-300" href={`tel:${PHONE}`}>
               1-780-880-8416
-            </a>
+            </Link>
           {' '} or the other ways below. I'd love a chance to connect with other like minded individuals.
         </p>
         <div className="flex items-center justify-start space-x-3">

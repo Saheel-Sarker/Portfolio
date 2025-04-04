@@ -17,7 +17,7 @@ export function Education({ items }: EducationProps) {
         
         <div
           key={index}
-          className=" pl-4 border-l-[1px] dark:border-zinc-500 border-zinc-600 group "
+          className="pb-8 pl-4 border-l-[1px] dark:border-zinc-500 border-zinc-600 group "
         >
           <div className='absolute -left-0'>
             <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-500 '></div>

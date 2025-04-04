@@ -16,20 +16,19 @@ export type TimelineProps = {
 
 export function Timeline({ items }: TimelineProps) {
   return (
-    <div className="relative ">
+    <div className="relative">
       
       {items.map((item, index) => (
-        
-        <Disclosure key={index} className="pb-8 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 hover:border-black dark:hover:border-white group transition-colors">
+        <Disclosure key={index} className="pb-8 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 group transition-colors">
           <DisclosureTrigger>
-            <div className='cursor-pointer'>
-                    <div className='absolute -left-0'>
-            <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-white group-hover:bg-black transition-colors'></div>
+          <div className=''>
+            <div className='absolute -left-0'>
+            <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-50 group-hover:bg-zinc-950 group-hover:h-[2px] transition-colors'></div>
           </div>
-          <h3 className="text-zinc-600 dark:text-zinc-400 font-[450] font-base group-hover:text-zinc-950 dark:group-hover:text-zinc-50 transition-colors">{item.title}</h3>
+          <h3 className="font-[450] font-base text-zinc-950 dark:text-zinc-50">{item.title}</h3>
           <div className='flex justify-between'>
-          <p className=" text-zinc-600 dark:text-zinc-400">{item.company}</p>
-          <p className=" text-zinc-600 dark:text-zinc-400">{item.dateRange}</p>
+          <p className=" text-zinc-600 dark:text-zinc-400 group-hover:dark:text-zinc-50 group-hover:text-zinc-950">{item.company}</p>
+          <p className=" text-zinc-600 dark:text-zinc-400 group-hover:dark:text-zinc-50 group-hover:text-zinc-950">{item.dateRange}</p>
           </div>
           </div>
           </DisclosureTrigger>
@@ -68,7 +67,7 @@ export function Timeline({ items }: TimelineProps) {
                 
               )}
               </DisclosureContent>
-        </Disclosure>
+        </Disclosure>  
       ))}
   </div>
   )

@@ -7,7 +7,7 @@ import { ThemeProvider } from 'next-themes'
 
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { Cursor } from '@/components/motion-primitives/cursor'
-import {motion} from 'motion/react'
+import { Fireflies } from '@/components/ui/Fireflies'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -55,12 +55,26 @@ export default function RootLayout({
           defaultTheme="system"
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-            <Cursor >
-              <div className='w-2 h-2 rounded-full bg-gray-500/40 backdrop-blur-md dark:bg-gray-300/40'></div>
-            </Cursor>
-            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
+            <Cursor
+            springConfig={{
+              stiffness: 50,
+              damping: 5,
+              bounce: 0,
+              mass: 0.15
+            }}
+            // variants={{
+            //   initial: { scale: 0.3, opacity: 0 },
+            //   animate: { scale: 1, opacity: 1, width: 20, height: 20 },
+            //   exit: { scale: 0.3, opacity: 0 },
+            // }}
+            ><div className='w-15 h-15 border-zinc-950 dark:border-zinc-50 border-2 rounded-full'></div></Cursor>
+            <Cursor><div className='w-1 h-1 bg-zinc-950 dark:bg-zinc-50 rounded-full'></div></Cursor>
+            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20 overflow-hidden">
+              <Fireflies></Fireflies>
               <Header />
+  
               {children}
+           
               <Footer />
             </div>
           </div>
