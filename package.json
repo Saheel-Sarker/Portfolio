@@ -6,10 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+      "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
-  "homepage": "https://Saheel-Sarker.github.io/Portfolio",
-
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
@@ -20,8 +20,6 @@
     "@tsparticles/slim": "^3.8.1",
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
-    "eslint-plugin-prettier": "^5.2.6",
-    "gh-pages": "^6.3.0",
     "lucide-react": "^0.468.0",
     "motion": "^11.18.2",
     "next": "15.1.1",
