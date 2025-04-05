@@ -27,6 +27,7 @@ import { TechnologiesGrid } from '@/components/ui/TechnologiesGrid'
 import { Education } from '@/components/ui/Education'
 import { Tooltip } from 'react-tooltip'
 import { Disclosure, DisclosureContent, DisclosureTrigger } from '@/components/motion-primitives/disclosure'
+import { useState } from 'react'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -138,6 +139,19 @@ function MagneticSocialLink({
 }
 
 export default function Personal() {
+  const [selectedProjects, setSelectedProjects] = useState<string[]>([])
+
+  function handleSelectedProjects(id : string) {
+    console.log('is clicked')
+    if (selectedProjects.includes(id)) {
+      setSelectedProjects(selectedProjects => selectedProjects.filter(i => i !==  id));
+    }
+    else {
+      setSelectedProjects(selectedProjects => [...selectedProjects, id]);
+    }
+    console.log(selectedProjects)
+  }
+
   return (
     <motion.main
       className="space-y-24"
@@ -192,7 +206,7 @@ export default function Personal() {
               </div>
               <Disclosure className="px-1">
                 <DisclosureTrigger>
-                <div className=''>
+                <div>
                 <Link
                   className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50 hover:underline underline-offset-2 cursor-none"
                   href={project.link}
@@ -202,7 +216,7 @@ export default function Personal() {
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </Link>
-                <p className="text-base text-zinc-600 dark:text-zinc-400 hover:dark:text-zinc-50 hover:text-zinc-950 animate-wiggle hover:animate-none">
+                <p className={`text-base hover:dark:text-zinc-50 hover:text-zinc-950  ${selectedProjects.includes(project.id) ? 'text-zinc-950 dark:text-zinc-50' : 'text-zinc-700 dark:text-zinc-300 hover:animate-none animate-wiggle'}`} onClick={()=>handleSelectedProjects(project.id)}>
                   {project.description}
                 </p>
                 </div>
