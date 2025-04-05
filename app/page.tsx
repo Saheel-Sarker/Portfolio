@@ -117,7 +117,7 @@ function MagneticSocialLink({
         data-tooltip-content={label}
       >
         {children}
-        <Tooltip id={label} place='bottom'></Tooltip>
+        <Tooltip id={label} place='bottom-start'></Tooltip>
         {/* <svg
           width="15"
           height="15"
