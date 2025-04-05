@@ -139,19 +139,6 @@ function MagneticSocialLink({
 }
 
 export default function Personal() {
-  const [selectedProjects, setSelectedProjects] = useState<string[]>([])
-
-  function handleSelectedProjects(id : string) {
-    console.log('is clicked')
-    if (selectedProjects.includes(id)) {
-      setSelectedProjects(selectedProjects => selectedProjects.filter(i => i !==  id));
-    }
-    else {
-      setSelectedProjects(selectedProjects => [...selectedProjects, id]);
-    }
-    console.log(selectedProjects)
-  }
-
   return (
     <motion.main
       className="space-y-24"
@@ -183,9 +170,9 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Technologies</h3>
-        <AnimatedBackground className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80">
+
             <TechnologiesGrid technologies={TECHNOLOGIES} />
-        </AnimatedBackground>
+
       </motion.section>
 
       <motion.section
@@ -204,7 +191,7 @@ export default function Personal() {
                   className="w-full rounded-xl object-cover ">
                   </img>
               </div>
-              <Disclosure className="px-1">
+              <Disclosure className="px-1 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900/75 duration-300">
                 <DisclosureTrigger>
                 <div>
                 <Link
@@ -216,7 +203,7 @@ export default function Personal() {
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </Link>
-                <p className={`text-base hover:dark:text-zinc-50 hover:text-zinc-950  ${selectedProjects.includes(project.id) ? 'text-zinc-950 dark:text-zinc-50' : 'text-zinc-700 dark:text-zinc-300 hover:animate-none animate-wiggle'}`} onClick={()=>handleSelectedProjects(project.id)}>
+                <p className='text-base text-zinc-600 dark:text-zinc-400'>
                   {project.description}
                 </p>
                 </div>
@@ -240,7 +227,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Education</h3>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-0">
           <Education items={EDUCATION} />
         </div>
       </motion.section>
@@ -250,7 +237,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Experience</h3>
-        <div className="flex flex-col space-y-2 ">
+        <div className="flex flex-col space-y-0 ">
           <Timeline items={WORK_EXPERIENCE} />
         </div>
       </motion.section>

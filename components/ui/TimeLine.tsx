@@ -1,8 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { TextShimmer } from '../motion-primitives/text-shimmer'
 import { Disclosure, DisclosureContent, DisclosureTrigger } from '../motion-primitives/disclosure'
-import { useState } from 'react'
 
 export type TimelineItem = {
   title: string
@@ -18,41 +16,22 @@ export type TimelineProps = {
 }
 
 export function Timeline({ items }: TimelineProps) {
-    const [selectedProjects, setSelectedProjects] = useState<string[]>([])
-  
-    function handleSelectedProjects(id : string) {
-      console.log('is clicked')
-      if (selectedProjects.includes(id)) {
-        setSelectedProjects(selectedProjects => selectedProjects.filter(i => i !==  id));
-      }
-      else {
-        setSelectedProjects(selectedProjects => [...selectedProjects, id]);
-      }
-      console.log(selectedProjects)
-    }
 
   return (
-    <div className="relative">
-      
-      {items.map((item) => (
-        <Disclosure key={item.id} className="pb-8 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 transition-colors">
+      items.map((item) => (
+        <Disclosure key={item.id} className="pb-8 pt-2 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900/50 duration-300">
           <DisclosureTrigger>
           <div className='group' >
-          <div onClick={()=>handleSelectedProjects(item.id)}>
-          <div className=''>
             <div className='absolute -left-0'>
-            <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-400 dark:group-hover:bg-zinc-50 group-hover:bg-zinc-950 group-hover:h-[2px] transition-colors'></div>
+              <div className='w-3 h-[1px] relative top-3 bg-zinc-600 dark:bg-zinc-400 '></div>
+            </div>
+            <h3 className="font-[450] font-base text-zinc-950 dark:text-zinc-50">{item.title}</h3>
+            <div className='flex justify-between pr-2' >
+              <p className=' text-zinc-600 dark:text-zinc-400'>{item.company}</p>
+              <p className=' text-zinc-600 dark:text-zinc-400'>{item.dateRange}</p>
+            </div>
           </div>
-          
-          <h3 className="font-[450] font-base text-zinc-950 dark:text-zinc-50">{item.title}</h3>
-          <div className='flex justify-between' >
-            <p className={` group-hover:dark:text-zinc-50 group-hover:text-zinc-950 ${selectedProjects.includes(item.id) ? 'text-zinc-950 dark:text-zinc-50' : 'text-zinc-600 dark:text-zinc-400 hover:animate-none animate-wiggle'}`}>{item.company}</p>
-            <p className={` group-hover:dark:text-zinc-50 group-hover:text-zinc-950  ${selectedProjects.includes(item.id) ? 'text-zinc-950 dark:text-zinc-50' : 'text-zinc-700 dark:text-zinc-300 hover:animate-none animate-wiggle'}`}>{item.dateRange}</p>
-          </div>
-          </div>
-          </div>
-          </div>
-          </DisclosureTrigger>
+           </DisclosureTrigger>
           <DisclosureContent>
           <ul className="mt-2 list-disc list-inside text-zinc-600 dark:text-zinc-400">
             {item.skills.map((skill, i) => (
@@ -89,7 +68,6 @@ export function Timeline({ items }: TimelineProps) {
               )}
               </DisclosureContent>
         </Disclosure>  
-      ))}
-  </div>
+      ))
   )
 }
