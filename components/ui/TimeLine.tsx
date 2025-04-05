@@ -19,7 +19,7 @@ export function Timeline({ items }: TimelineProps) {
 
   return (
       items.map((item) => (
-        <Disclosure key={item.id} className="pb-8 pt-2 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900/50 duration-300">
+        <Disclosure key={item.id} className="pb-8 pt-2 pl-4 border-l-[1px] dark:border-zinc-400 border-zinc-600 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900/75 duration-300">
           <DisclosureTrigger>
           <div className='group' >
             <div className='absolute -left-0'>
