@@ -18,7 +18,7 @@ type Project = {
   video: string
   id: string
   technologies?: string[]
-  thumbnail?: string // Optional thumbnail image 
+  thumbnail: string // Optional thumbnail image 
   demo?: string // Optional demo link
 }
 
@@ -184,18 +184,18 @@ export const PROJECTS: Project[] = [
   //   technologies: ['Java', 'Android API', 'Firebase', 'XML'],
   //   thumbnail: './Mealy.png',
   // },
-  // {
-  //   name: 'SkillUP AI',
-  //   description:
-  //     'Platform that matches users with personalized job opportunities based on their skills and preferences using AI.',
-  //   link: '',
-  //   video:
-  //     'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
-  //   id: 'project5',
-  //   technologies: ['AWS', 'Angular', 'Typescript', 'Node.js', 'Bootstrap', 'Python', 'Cohere', 'Apify', ],
-  //   thumbnail: './SkillUp.png',
-  //   github: ''
-  // },
+  {
+    name: 'SkillUP AI',
+    description:
+      'Platform automates the process of finding and analyzing the job market, and provides personalized recommendations for skill development.',
+    link: 'https://master.d3dbxfxzl08x6v.amplifyapp.com/',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    id: 'project5',
+    technologies: ['AWS (DynamoDB, S3, Lambda, API Gateway, Eventbridge, Amplify)', 'Angular', 'Typescript', 'Node.js', 'Bootstrap', 'Python', 'Cohere', 'Apify'],
+    thumbnail: './SkillUp.png',
+    github: 'https://github.com/Saheel-Sarker/JobMatch-Front-End-'
+  },
 
 ]
 
