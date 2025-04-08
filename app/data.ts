@@ -141,16 +141,14 @@ export const TECHNOLOGIES: technology[] = [
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Your Scribe',
-    description:
-      'Audio Transcriber and Translator powered by AI.',
-    link: 'https://your-scribe.vercel.app/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
-    id: 'project1',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', "Xenova", "Render"],
-    thumbnail: './YourScribe.png',
-    github: 'https://github.com/Saheel-Sarker/YourScribe'
+    name: 'Seqr Safe',
+    description: 'Secure password manager with encrypted storage, multi-device sync, and a seamless user experience.',
+    link: 'https://seqr-safe.com/',
+    github: 'https://github.com/Saheel-Sarker/Seqr-Safe',
+    video: 'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/...', 
+    id: 'project4',
+    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Express.js', 'TailwindCSS', 'Stripe', 'Render', 'JWT', 'bcrypt', 'Crypto.js', 'Mailtrap'],
+    thumbnail: './SeqrSafe.png',
   },
   {
     name: 'ExpenseApp',
@@ -165,14 +163,16 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/Saheel-Sarker/ExpenseApp'
   },
   {
-    name: 'Seqr Safe',
-    description: 'Secure password manager with encrypted storage, multi-device sync, and a seamless user experience.',
-    link: 'https://seqr-safe.com/',
-    github: 'https://github.com/Saheel-Sarker/Seqr-Safe',
-    video: 'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/...', 
-    id: 'project4',
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Express.js', 'TailwindCSS', 'Stripe', 'Render', 'JWT', 'bcrypt', 'Crypto.js', 'Mailtrap'],
-    thumbnail: './SeqrSafe.png',
+    name: 'Your Scribe',
+    description:
+      'Audio Transcriber and Translator powered by AI.',
+    link: 'https://your-scribe.vercel.app/',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    id: 'project1',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', "Xenova", "Render"],
+    thumbnail: './YourScribe.png',
+    github: 'https://github.com/Saheel-Sarker/YourScribe'
   },
   // {
   //   name: 'Mealy',
