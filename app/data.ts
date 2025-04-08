@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project1',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', "Xenova"],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', "Xenova", "Render"],
     thumbnail: './YourScribe.png',
     github: 'https://github.com/Saheel-Sarker/YourScribe'
   },
@@ -160,7 +160,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project3',
-    technologies: ['.NET', 'C#', 'MS SQL Server', "Bootstrap", ],
+    technologies: ['.NET', 'C#', 'PostgreSQL', "Bootstrap", "Docker", "Railway"],
     thumbnail: './ExpenseTracker.png',
     github: 'https://github.com/Saheel-Sarker/ExpenseApp'
   },
@@ -171,7 +171,7 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/Saheel-Sarker/Seqr-Safe',
     video: 'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/...', 
     id: 'project4',
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Express.js', 'TailwindCSS', 'Stripe'],
+    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Express.js', 'TailwindCSS', 'Stripe', 'Render', 'JWT', 'bcrypt', 'Crypto.js', 'Mailtrap'],
     thumbnail: './SeqrSafe.png',
   },
   // {
@@ -204,8 +204,12 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
     title: 'Founder & Lead Software Developer',
     company: 'Seqr Safe',
     dateRange: 'Nov 2024 - Present',
-    skills: ['Leadership', 'Product Design', 'Business Strategy', 'Technologies: JavaScript, Next, Node.js, Mongodb, Express.js, TailwindCSS, Stripe'],
-    link: 'https://seqr-safe.com/',
+    skills: [
+      'Designed and developed a secure, subscription-based password manager for 70+ active users.',
+      'Built a REST API with robust encryption for sensitive user data using Crypto.js.',
+      'Integrated Stripe for subscription payments and Mailtrap for automated email notifications.',
+      'Tech Stack: Next.js, Node.js, MongoDB, Express.js, TailwindCSS, JWT, bcrypt, Stripe, Crypto.js, Mailtrap.',
+    ],
     id: 'work1',
   },
 
@@ -213,7 +217,12 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
     title: 'Freelance Software Developer',
     company: 'Upwork',
     dateRange: 'Feb 2024 - Nov 2024',
-    skills: ['Client Management', 'Project Management','Technologies: JavaScript, TypeScript, React, Angular, AWS, Terrraform, SQL, MS SQL'],
+    skills: [
+      'Delivered multiple high-priority projects to various clients while ensuring timely delivery and optimal performance.',
+      'Developed professional websites using Angular and React, enhancing user engagement and satisfaction.',
+      'Revamped cloud infrastructure with Terraform, improving scalability, reliability, and deployment time.',
+      'Tech Stack: Angular, React, Terraform, SQL, AWS (Lambda, EventBridge, S3, DynamoDB, API Gateway), Cohere, Apify, Python.',
+    ],
     id: 'work2',
   },
 ]
@@ -272,6 +281,15 @@ export const EDUCATION = [
     dateRange: 'Sept 2018 - Nov 2023',
     description:
       'Specialized in Software Engineering and Artificial Intelligence.',
+    courses: [
+      'Data Structures and Algorithms',
+      'Web and Mobile Development',
+      'Database Management',
+      'Practical Programming Methodology',
+      'Machine Learning',
+      'Data Analysis',
+      'Numerical Methods',
+    ],
   },
 ]
 
