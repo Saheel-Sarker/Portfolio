@@ -153,7 +153,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'ExpenseApp',
     description:
-      'Budget Tracker that uses AI to analyze data, create analytics, and forcast finances.',
+      'Budget Tracker that uses AI to analyze data, create analytics, and forecast finances.',
     link: 'https://expenseapp-portfolio.up.railway.app/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
@@ -165,7 +165,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Your Scribe',
     description:
-      'Audio Transcriber and Translator powered by AI.',
+      'Real-time audio transcriber and translator powered by AI.',
     link: 'https://your-scribe.vercel.app/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
