@@ -13,7 +13,7 @@ import { useTheme } from "next-themes"; // Import useTheme
 
 export function Fireflies() {
   const [init, setInit] = useState(false);
-  const count= 40 // Default particle count
+  const count= 25 // Default particle count
   const { resolvedTheme } = useTheme(); // Get the current theme
   console.log("Current theme:", resolvedTheme); // Log the current theme
 

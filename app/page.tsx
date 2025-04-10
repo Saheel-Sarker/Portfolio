@@ -206,6 +206,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id='technologies'
+        className='scroll-mt-36'
       >
         <h3 className="mb-5 text-lg font-medium">Technologies</h3>
         <TechnologiesGrid technologies={TECHNOLOGIES} />
@@ -215,6 +217,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id='projects'
+        className='scroll-mt-36'
       >
         <h3 className="mb-5 text-lg font-medium">Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -271,6 +275,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id='education'
+        className='scroll-mt-36'
       >
         <h3 className="mb-5 text-lg font-medium">Education</h3>
         <div className="flex flex-col space-y-0">
@@ -281,6 +287,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id='experience'
+        className='scroll-mt-36'
       >
         <h3 className="mb-5 text-lg font-medium">Experience</h3>
         <div className="flex flex-col space-y-0 ">
@@ -291,6 +299,8 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        id='contact'
+        className='scroll-mt-36'
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">

@@ -73,9 +73,9 @@ export function Footer() {
         <a href="https://github.com/saheel-sarker" target="_blank">
           <span  className="text-sm text-zinc-500">© 2024 Saheel Sarker</span>
         </a>
-        <div className="text-sm text-zinc-400">
+        {/* <div className="text-sm text-zinc-400">
           <ThemeSwitch />
-        </div>
+        </div> */}
       </div>
     </footer>
   )
