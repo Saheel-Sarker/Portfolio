@@ -9,10 +9,13 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim"; // Slim version for smaller bundle size
+import { useTheme } from "next-themes"; // Import useTheme
 
 export function Fireflies() {
   const [init, setInit] = useState(false);
-  const count= 30 // Default particle count
+  const count= 40 // Default particle count
+  const { resolvedTheme } = useTheme(); // Get the current theme
+  console.log("Current theme:", resolvedTheme); // Log the current theme
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -49,7 +52,7 @@ export function Fireflies() {
         },
       },
       particles: {
-        color: { value: "#5B1166" },
+        color: { value: resolvedTheme === "dark" ? "#FFFFFF" : "#000000" }, 
         move: {
           enable: true,
           speed: 0.5, // Slower movement for floating effect
@@ -90,7 +93,7 @@ export function Fireflies() {
       },
       detectRetina: true,
     }),
-    []
+    [resolvedTheme, count] // Add count to dependencies
   );
   
   if (init) {
