@@ -78,47 +78,55 @@ export function Menu() {
   ];
 
   return (
-    <div className='flex justify-center items-center w-full pt-3.25 pb-2 sticky top-0 z-10 bg-white dark:bg-black'>
-      <div className="flex justify-between items-center w-full md:w-auto">
+    <div className="sticky top-0 z-10 bg-white dark:bg-black w-full pt-3.5 pb-2">
+
+      <div className="flex justify-between items-center px-4 md:px-8">
         <button
-          className="md:hidden text-zinc-800 dark:text-zinc-200"
+          className="md:hidden text-zinc-800 dark:text-zinc-200 z-20"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
         >
           {isMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         </button>
       </div>
-      <div
-        className={`${
-          isMenuOpen ? 'flex' : 'hidden'
-        } flex-col md:flex-row md:flex items-center w-full md:w-auto mt-4 md:mt-0 space-x-2.25`}
-      >
-        <AnimatedBackground
-        className="pointer-events-none rounded-lg bg-zinc-100 dark:bg-zinc-800"
-        defaultValue={navitems[0].name}
-        transition={{
-          type: 'spring',
-          bounce: 0,
-          duration: 0.2,
-        }}
-        enableHover={false}
-      >
+
+
+      <div className="hidden md:flex justify-center items-center space-x-4 mt-1">
         {navitems.map((item, index) => (
           <a
-          key={index}
-          href={item.href}
-          data-id={item.name}
-          className="inline-flex items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50 px-2.75 py-2 text-lg offset-"
+            key={index}
+            href={item.href}
+            className="text-zinc-700 dark:text-zinc-300 text-lg px-3 py-1"
           >
             {item.name}
           </a>
         ))}
-        </AnimatedBackground>
-      </div>
-      <div className='absolute right-4'>
-        <ThemeSwitch />
+        <div className="absolute right-4" >
+          <ThemeSwitch />
+        </div>
       </div>
 
+
+
+      {/* Mobile Fullscreen Overlay Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white dark:bg-black flex flex-col items-center justify-center overflow-y-auto px-4 py-8 space-y-4 md:hidden z-10">
+          {navitems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className="text-zinc-700 dark:text-zinc-300 text-xl py-2"
+              onClick={() => setIsMenuOpen(false)} // Close menu on click
+            >
+              {item.name}
+            </a>
+          ))}
+
+          <div className="mt-6">
+            <ThemeSwitch />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
