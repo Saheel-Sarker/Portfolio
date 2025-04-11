@@ -78,9 +78,9 @@ export function Menu() {
   ];
 
   return (
-    <div className="sticky top-0 z-10 bg-white dark:bg-black w-full pt-3.5 pb-2">
+    <div className="sticky top-0 z-10 bg-white dark:bg-black w-full py-3.5 pb-2">
 
-      <div className="absolute pl-4 z-20">
+      <div className="pl-4 z-20">
         <button
           className="md:hidden text-zinc-800 dark:text-zinc-200 z-20"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -90,17 +90,30 @@ export function Menu() {
         </button>
       </div>
 
-      <div className="hidden md:flex justify-center items-center space-x-4 mt-1">
+      <div className="hidden md:flex justify-center items-center space-x-4 ">
+          <div className="flex-1 ml-10" />
+          <AnimatedBackground
+          className="pointer-events-none rounded-lg bg-zinc-100 dark:bg-zinc-800"
+          defaultValue={navitems[0].name}
+          transition={{
+            type: 'spring',
+            bounce: 0,
+            duration: 0.2,
+          }}
+          enableHover={false}
+        >
         {navitems.map((item, index) => (
           <a
             key={index}
             href={item.href}
-            className="text-zinc-700 dark:text-zinc-300 text-lg px-3 py-1"
+            data-id={item.name}
+            className="inline-flex text-lg px-3 py-1 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50"
           >
             {item.name}
           </a>
         ))}
-        <div className="absolute right-4" >
+        </AnimatedBackground>
+        <div className="flex flex-1 justify-end mr-10" >
           <ThemeSwitch />
         </div>
       </div>
