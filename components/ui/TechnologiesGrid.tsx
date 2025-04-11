@@ -16,11 +16,11 @@ export type TechnologiesGridProps = {
 export function TechnologiesGrid({ technologies }: TechnologiesGridProps) {
   return (
     <div className="w-full">
-    <div className="grid justify-end md:grid-cols-8 sm:grid-cols-4 grid-cols-2 gap-4">
+    <div className="grid justify-end md:grid-cols-8 grid-cols-6 gap-4">
       {technologies.map((tech) => (
         <Magnetic springOptions={{ bounce: 0 }} intensity={0.3} key={tech.name}>
           <div
-            className="aspect-square flex flex-col items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 p-2 dark:hover:bg-zinc-700 w-full max-w-[100px] sm:max-w-[150px]"
+            className="aspect-square flex flex-col items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 p-2 dark:hover:bg-zinc-700 w-full "
             data-tooltip-id={`tooltip-${tech.name}`}
           >
             <Image
