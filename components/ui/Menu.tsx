@@ -80,7 +80,7 @@ export function Menu() {
   return (
     <div className="sticky top-0 z-10 bg-white dark:bg-black w-full pt-3.5 pb-2">
 
-      <div className="flex justify-between items-center px-4 md:px-8">
+      <div className="absolute pl-4 z-20">
         <button
           className="md:hidden text-zinc-800 dark:text-zinc-200 z-20"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -89,7 +89,6 @@ export function Menu() {
           {isMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
         </button>
       </div>
-
 
       <div className="hidden md:flex justify-center items-center space-x-4 mt-1">
         {navitems.map((item, index) => (
@@ -106,9 +105,6 @@ export function Menu() {
         </div>
       </div>
 
-
-
-      {/* Mobile Fullscreen Overlay Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white dark:bg-black flex flex-col items-center justify-center overflow-y-auto px-4 py-8 space-y-4 md:hidden z-10">
           {navitems.map((item, index) => (
