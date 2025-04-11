@@ -80,7 +80,7 @@ export function Menu() {
   return (
     <div className="sticky top-0 z-10 bg-white dark:bg-black w-full py-3.5 pb-2.25">
 
-      <div className="pl-4 z-20 fixed">
+      <div className="pl-4 z-20">
         <button
           className="md:hidden text-zinc-800 dark:text-zinc-200 z-20"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -119,7 +119,7 @@ export function Menu() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white dark:bg-black flex flex-col items-center justify-center overflow-y-auto px-4 py-8 space-y-4 md:hidden z-10">
+        <div className="h-screen bg-white dark:bg-black flex flex-col items-center justify-center overflow-y-auto px-4 py-8 space-y-4 md:hidden z-10">
           {navitems.map((item, index) => (
             <a
               key={index}
