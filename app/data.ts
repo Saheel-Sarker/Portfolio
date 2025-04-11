@@ -13,7 +13,7 @@ type TimelineItem = {
 type Project = {
   name: string
   description: string
-  link: string
+  link?: string
   github: string
   video: string
   id: string
@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
     thumbnail: './SeqrSafe.png',
   },
   {
-    name: 'ExpenseApp',
+    name: 'MoneyMinded',
     description:
       'Budget Tracker that uses AI to analyze data, create analytics, and forecast finances.',
     link: 'https://expenseapp-portfolio.up.railway.app/',
@@ -185,10 +185,10 @@ export const PROJECTS: Project[] = [
   //   thumbnail: './Mealy.png',
   // },
   {
-    name: 'SkillUP AI',
+    name: 'SkillUP',
     description:
-      'Platform automates the process of finding and analyzing the job market, and provides personalized recommendations for skill development.',
-    link: 'https://master.d3dbxfxzl08x6v.amplifyapp.com/',
+      'Automates the process of finding relevant jobs, analyze the job market using AI, and provides personalized recommendations for skill development.',
+    // link: 'https://master.d3dbxfxzl08x6v.amplifyapp.com/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project5',

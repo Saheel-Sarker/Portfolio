@@ -245,9 +245,10 @@ export default function Personal() {
                   <Link href={project.github} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 cursor-none'>
                    <Github className='w-5'></Github>
                   </Link>
-                  <Link href={project.link} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 cursor-none'>
+                  {project.link && <Link href={project.link} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 cursor-none'>
                     <SquareArrowOutUpRight className='w-5'></SquareArrowOutUpRight>
-                  </Link>
+                  </Link>}
+
                   </div>
                 </div>
                 <p className='text-base text-zinc-600 dark:text-zinc-400'>
