@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
     thumbnail: './SeqrSafe.png',
   },
   {
-    name: 'MoneyMinded',
+    name: 'Money Minded',
     description:
       'Budget Tracker that uses AI to analyze data, create analytics, and forecast finances.',
     link: 'https://expenseapp-portfolio.up.railway.app/',
@@ -185,14 +185,14 @@ export const PROJECTS: Project[] = [
   //   thumbnail: './Mealy.png',
   // },
   {
-    name: 'SkillUP',
+    name: 'Skill Up',
     description:
-      'Automates the process of finding relevant jobs, analyze the job market using AI, and provides personalized recommendations for skill development.',
+      'Uses OpenAI to automate job searches, assess market trends, and suggest key skills to develop.',
     // link: 'https://master.d3dbxfxzl08x6v.amplifyapp.com/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project5',
-    technologies: ['AWS (DynamoDB, S3, Lambda, API Gateway, Eventbridge, Amplify)', 'Angular', 'Typescript', 'Node.js', 'Bootstrap', 'Python', 'Cohere', 'Apify'],
+    technologies: ['AWS (DynamoDB, S3, Lambda, API Gateway, Eventbridge, Amplify)', 'Angular', 'Typescript', 'Node.js', 'Bootstrap', 'Python', 'OpenAI', 'Apify'],
     thumbnail: './SkillUp.png',
     github: 'https://github.com/Saheel-Sarker/JobMatch-Front-End-'
   },
