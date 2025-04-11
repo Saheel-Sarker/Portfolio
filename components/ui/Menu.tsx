@@ -78,7 +78,7 @@ export function Menu() {
   ];
 
   return (
-    <div className="sticky top-0 z-10 bg-white dark:bg-black w-full py-3.5 pb-2">
+    <div className="sticky top-0 z-10 bg-white dark:bg-black w-full py-3.5 pb-2.25">
 
       <div className="pl-4 z-20">
         <button
@@ -90,7 +90,7 @@ export function Menu() {
         </button>
       </div>
 
-      <div className="hidden md:flex justify-center items-center space-x-4 ">
+      <div className="hidden md:flex justify-center items-center space-x-1.75">
           <div className="flex-1 ml-10" />
           <AnimatedBackground
           className="pointer-events-none rounded-lg bg-zinc-100 dark:bg-zinc-800"
