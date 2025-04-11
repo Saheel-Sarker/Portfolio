@@ -80,7 +80,7 @@ export function Menu() {
   return (
     <div className="sticky top-0 z-10 bg-white dark:bg-black w-full py-3.5 pb-2.25">
 
-      <div className="pl-4 z-20">
+      <div className="pl-4 z-20 fixed">
         <button
           className="md:hidden text-zinc-800 dark:text-zinc-200 z-20"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -134,6 +134,8 @@ export function Menu() {
           <div className="mt-6">
             <ThemeSwitch />
           </div>
+
+          
         </div>
       )}
     </div>
