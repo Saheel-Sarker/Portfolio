@@ -141,7 +141,7 @@ export const TECHNOLOGIES: technology[] = [
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Seqr Safe',
+    name: 'Zeni Pass',
     description: 'Secure password manager with encrypted storage, multi-device sync, and a seamless user experience.',
     link: 'https://seqr-safe.com/',
     github: 'https://github.com/Saheel-Sarker/Seqr-Safe',
@@ -202,7 +202,7 @@ export const PROJECTS: Project[] = [
 export const WORK_EXPERIENCE: TimelineItem[] = [
   {
     title: 'Founder & Lead Software Developer',
-    company: 'Seqr Safe',
+    company: 'Zeni Pass',
     dateRange: 'Nov 2024 - Present',
     skills: [
       'Designed and developed a secure, subscription-based password manager for 70+ active users.',
