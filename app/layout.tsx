@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
 
       <body
-        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-black`}
+        className={`${geist.variable} ${geistMono.variable} bg-zinc-100 tracking-tight antialiased dark:bg-zinc-950`}
       >
         <ScrollProgress
           className="fixed top-0 z-20 h-1.25 bg-gray-300 dark:bg-zinc-600"
