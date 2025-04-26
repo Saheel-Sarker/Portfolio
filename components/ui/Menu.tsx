@@ -69,7 +69,7 @@ export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navitems = [
-    { name: 'Header', href: '#' },
+    { name: 'About Me', href: '#' },
     { name: 'Technologies', href: '#technologies' },
     { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },    
@@ -107,7 +107,7 @@ export function Menu() {
             key={index}
             href={item.href}
             data-id={item.name}
-            className="inline-flex text-lg px-3 py-1 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50"
+            className="inline-flex text-lg px-3 py-1 items-center justify-center text-zinc-500 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50 cursor-none hover:scale-105 hover:text-zinc-800 dark:hover:text-zinc-200 transition-all duration-100 ease-in-out"
           >
             {item.name}
           </a>
