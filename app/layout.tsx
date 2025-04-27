@@ -67,7 +67,7 @@ export default function RootLayout({
             ><div className='w-10 h-10 border-zinc-950 dark:border-zinc-50 md:border-2 rounded-full'></div></Cursor>
             <Cursor><div className='md:w-1 md:h-1 bg-zinc-950 dark:bg-zinc-50 rounded-full'></div></Cursor>
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20 overflow-hidden">
-              <Fireflies></Fireflies>
+              {/* <Fireflies></Fireflies> */}
               <Header />
               {children}
               <Footer />
