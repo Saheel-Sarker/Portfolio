@@ -62,8 +62,16 @@ export const TECHNOLOGIES: technology[] = [
     logo: 'https://www.svgrepo.com/show/341068/sql.svg',
   },
   {
+    name: 'GraphQL',
+    logo: 'https://www.svgrepo.com/show/439175/graphql.svg',
+  },
+  {
     name: 'Python',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  },
+  {
+    name: 'PHP',
+    logo: 'https://www.svgrepo.com/show/452088/php.svg',
   },
   {
     name: 'Java',
@@ -93,6 +101,11 @@ export const TECHNOLOGIES: technology[] = [
     name: 'React.js',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
+    {
+    name: 'Expo',
+    logo: 'https://www.svgrepo.com/show/353723/expo-icon.svg',
+  },
+
   {
     name: 'Next.js',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
@@ -200,8 +213,20 @@ export const PROJECTS: Project[] = [
 ]
 
 export const WORK_EXPERIENCE: TimelineItem[] = [
+    {
+    title: 'Full Stack Software Developer',
+    company: 'Zeni Pass',
+    dateRange: 'Nov 2024 - Present',
+    skills: [
+      'Turned figma designs into live screens.',
+      'Built upated legacy systems for better UI/UX, and improved the backend for said system',
+      'Created entirely fresh features including file management system for propietery and in app file management.',
+      'Tech Stack: React, React Native, Expo, Node.js, PHP/laravel, Graphql, CSS, AWS.',
+    ],
+    id: 'work1',
+  },
   {
-    title: 'Founder & Lead Software Developer',
+    title: 'Full Stack Software Developer',
     company: 'Zeni Pass',
     dateRange: 'Nov 2024 - Present',
     skills: [
