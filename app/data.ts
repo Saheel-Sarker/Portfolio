@@ -237,7 +237,7 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
       'Integrated Stripe for subscription payments and Mailtrap for automated email notifications.',
       'Tech Stack: Next.js, Node.js, MongoDB, Express.js, TailwindCSS, JWT, bcrypt, Stripe, Crypto.js, Mailtrap.',
     ],
-    id: 'work1',
+    id: 'work2',
   },
 
   // {
