@@ -215,12 +215,14 @@ export const PROJECTS: Project[] = [
 export const WORK_EXPERIENCE: TimelineItem[] = [
     {
     title: 'Full Stack Software Developer',
-    company: 'Zeni Pass',
-    dateRange: 'Nov 2024 - Present',
+    company: 'Aeternum Project',
+    dateRange: 'Dec 2025 - Present',
     skills: [
       'Turned figma designs into live screens.',
       'Built upated legacy systems for better UI/UX, and improved the backend for said system',
+      'Implemented admin system for S3 media file diagnostics, enabling team to self diagnose issues, eliminating related escalations.',
       'Created entirely fresh features including file management system for propietery and in app file management.',
+      'Overhauled Legacy Laravel systems to improve performance and reduce costs.',
       'Tech Stack: React, React Native, Expo, Node.js, PHP/laravel, Graphql, CSS, AWS.',
     ],
     id: 'work1',
@@ -228,7 +230,7 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
   {
     title: 'Full Stack Software Developer',
     company: 'Zeni Pass',
-    dateRange: 'Nov 2024 - Present',
+    dateRange: 'Nov 2023 - April 2025',
     skills: [
       'Designed and developed a secure, subscription-based password manager for 70+ active users.',
       'Built a REST API with robust encryption for sensitive user data using Crypto.js.',
@@ -238,18 +240,18 @@ export const WORK_EXPERIENCE: TimelineItem[] = [
     id: 'work1',
   },
 
-  {
-    title: 'Freelance Software Developer',
-    company: 'Upwork',
-    dateRange: 'Feb 2024 - Nov 2024',
-    skills: [
-      'Delivered multiple high-priority projects to various clients while ensuring timely delivery and optimal performance.',
-      'Developed professional websites using Angular and React, enhancing user engagement and satisfaction.',
-      'Revamped cloud infrastructure with Terraform, improving scalability, reliability, and deployment time.',
-      'Tech Stack: Angular, React, Terraform, SQL, AWS (Lambda, EventBridge, S3, DynamoDB, API Gateway), Cohere, Apify, Python.',
-    ],
-    id: 'work2',
-  },
+  // {
+  //   title: 'Freelance Software Developer',
+  //   company: 'Upwork',
+  //   dateRange: 'Feb 2024 - Nov 2024',
+  //   skills: [
+  //     'Delivered multiple high-priority projects to various clients while ensuring timely delivery and optimal performance.',
+  //     'Developed professional websites using Angular and React, enhancing user engagement and satisfaction.',
+  //     'Revamped cloud infrastructure with Terraform, improving scalability, reliability, and deployment time.',
+  //     'Tech Stack: Angular, React, Terraform, SQL, AWS (Lambda, EventBridge, S3, DynamoDB, API Gateway), Cohere, Apify, Python.',
+  //   ],
+  //   id: 'work2',
+  // },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
