@@ -289,7 +289,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Email',
     logo: React.createElement(Mail, { size: 24 }),
-    link: 'saheel@ualberta.ca',
+    link: 'saheel.sarker@gmail.com',
   },
   {
     label: 'Phone',
@@ -318,5 +318,5 @@ export const EDUCATION = [
   },
 ]
 
-export const EMAIL = 'saheel@ualberta.ca'
+export const EMAIL = 'saheel.sarker@gmail.com'
 export const PHONE = '+17808808416'

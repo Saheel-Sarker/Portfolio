@@ -20,7 +20,7 @@ export function Header() {
           </TextEffect>
         </Link>
         <TypeAnimation 
-        sequence={['Software Developer', 1000, 'Frontend Developer', 1000, 'Backend Developer', 1000, 'Data Engineer', 1000,'University of Alberta Graduate', 1000, () => {
+        sequence={['Full-StackSoftware Developer', 1000, 'Frontend Software Developer', 1000, 'Backend Software Developer', 1000, 'University of Alberta Graduate', 1000, () => {
           console.log('Sequence completed');
         },]} 
         wrapper='span'
