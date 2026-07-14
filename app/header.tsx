@@ -20,13 +20,13 @@ export function Header() {
           </TextEffect>
         </Link>
         <TypeAnimation 
-        sequence={['Full-StackSoftware Developer', 1000, 'Frontend Software Developer', 1000, 'Backend Software Developer', 1000, 'University of Alberta Graduate', 1000, () => {
+        sequence={['Full-Stack Software Developer', 1000, 'Frontend Software Developer', 1000, 'Backend Software Developer', 1000, 'University of Alberta Computer Science Graduate', 1000, () => {
           console.log('Sequence completed');
         },]} 
         wrapper='span'
         cursor={true}
         repeat={Infinity}
-        className='text-zinc-600 dark:text-zinc-500'
+        className='text-green-700 dark:text-green-400'
         />
         
       </div>
