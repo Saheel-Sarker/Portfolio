@@ -16,7 +16,7 @@ export type TechnologiesGridProps = {
 export function TechnologiesGrid({ technologies }: TechnologiesGridProps) {
   return (
     <div className="w-full">
-    <div className="grid justify-end md:grid-cols-8 grid-cols-6 gap-4">
+    <div className="grid justify-end md:grid-cols-9 grid-cols-6 gap-4">
       {technologies.map((tech) => (
         <Magnetic springOptions={{ bounce: 0 }} intensity={0.3} key={tech.name}>
           <div
