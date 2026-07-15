@@ -42,6 +42,7 @@ export function Timeline({ items }: TimelineProps) {
                 <button
                   type="button"
                   className='mt-2 inline-flex text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50'
+                  style={{ cursor: 'pointer' }}
                   aria-label={isOpen ? `Collapse ${item.title}` : `Expand ${item.title}`}
                 >
                   {isOpen ? <ChevronUp /> : <ChevronDown />}

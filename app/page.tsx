@@ -242,10 +242,10 @@ export default function Personal() {
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </p>
                 <div className='flex'>
-                  <Link href={project.github} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 cursor-none'>
+                  <Link href={project.github} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50'>
                    <Github className='w-5'></Github>
                   </Link>
-                  {project.link && <Link href={project.link} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50 cursor-none'>
+                  {project.link && <Link href={project.link} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50'>
                     <SquareArrowOutUpRight className='w-5'></SquareArrowOutUpRight>
                   </Link>}
 
@@ -257,7 +257,8 @@ export default function Personal() {
                 <Disclosure>
                 <DisclosureTrigger>
                   <div>
-                  <p className='hover:text-zinc-950 dark:hover:text-zinc-50 text-zinc-600 dark:text-zinc-400' onClick={() => handleExpanded(project.id)}>{expanded.includes(project.id) ? <ChevronUp></ChevronUp> : <ChevronDown></ChevronDown>}</p>
+                  <p className='hover:text-zinc-950 dark:hover:text-zinc-50 text-zinc-600 dark:text-zinc-400' onClick={() => handleExpanded(project.id)}
+                    style={{ cursor: 'pointer' }}>{expanded.includes(project.id) ? <ChevronUp></ChevronUp> : <ChevronDown></ChevronDown>}</p>
                   </div>
                 </DisclosureTrigger>
                 <DisclosureContent>
