@@ -15,6 +15,7 @@ type Project = {
   description: string
   link?: string
   github: string
+  youtube?: string
   video: string
   id: string
   technologies?: string[]
@@ -158,6 +159,7 @@ export const PROJECTS: Project[] = [
     description: 'Secure password manager with encrypted storage, multi-device sync, and a seamless user experience.',
     link: 'https://seqr-safe.com/',
     github: 'https://github.com/Saheel-Sarker/Seqr-Safe',
+    youtube: '',
     video: 'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/...', 
     id: 'project4',
     technologies: ['Next.js', 'Node.js', 'MongoDB', 'Express.js', 'TailwindCSS', 'Stripe', 'Render', 'JWT', 'bcrypt', 'Crypto.js', 'Mailtrap'],
@@ -172,7 +174,8 @@ export const PROJECTS: Project[] = [
     id: 'project3',
     technologies: ['.NET', 'C#', 'PostgreSQL', "Bootstrap", "Docker", "Railway"],
     thumbnail: './ExpenseTracker.png',
-    github: 'https://github.com/Saheel-Sarker/ExpenseApp'
+    github: 'https://github.com/Saheel-Sarker/ExpenseApp',
+    youtube: 'https://www.youtube.com/watch?v=3Z3auTbNIu8'
   },
   {
     name: 'Your Scribe',
@@ -184,7 +187,8 @@ export const PROJECTS: Project[] = [
     id: 'project1',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', "Xenova", "Render"],
     thumbnail: './YourScribe.png',
-    github: 'https://github.com/Saheel-Sarker/YourScribe'
+    github: 'https://github.com/Saheel-Sarker/YourScribe',
+    youtube: 'https://www.youtube.com/watch?v=11_nMaZSPD4'
   },
   // {
   //   name: 'Mealy',
@@ -206,7 +210,8 @@ export const PROJECTS: Project[] = [
     id: 'project5',
     technologies: ['AWS (DynamoDB, S3, Lambda, API Gateway, Eventbridge, Amplify)', 'Angular', 'Typescript', 'Node.js', 'Bootstrap', 'Python', 'OpenAI', 'Apify'],
     thumbnail: './SkillUp.png',
-    github: 'https://github.com/Saheel-Sarker/JobMatch-Front-End-'
+    github: 'https://github.com/Saheel-Sarker/JobMatch-Front-End-',
+    youtube: 'https://www.youtube.com/watch?v=77uTOgYzzlQ'
   },
 
 ]

@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { ArrowUpRight, ChevronDown, ChevronDownSquare, ChevronUp, ChevronUpCircle, ChevronUpSquare, FolderGit, GitBranch, Github, Link2, MoveUpRight, SquareArrowOutUpRight, XIcon } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, ChevronDownSquare, ChevronUp, ChevronUpCircle, ChevronUpSquare, FolderGit, GitBranch, Github, Link2, MoveUpRight, SquareArrowOutUpRight, XIcon, Youtube } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -241,10 +241,13 @@ export default function Personal() {
                   {project.name} 
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
                 </p>
-                <div className='flex'>
+                <div className='flex' style={{flexDirection: 'row', gap: '5px'}}>
                   <Link href={project.github} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50'>
                    <Github className='w-5'></Github>
                   </Link>
+                  {project.youtube && <Link href={project.youtube} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50'>
+                    <Youtube className='w-5'></Youtube>
+                  </Link>}
                   {project.link && <Link href={project.link} target="_blank" rel="noopener noreferrer" className='flex text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-50'>
                     <SquareArrowOutUpRight className='w-5'></SquareArrowOutUpRight>
                   </Link>}
