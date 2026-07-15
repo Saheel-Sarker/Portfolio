@@ -71,7 +71,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
       <div className="flex items-center justify-between">
         <a href="https://github.com/saheel-sarker" target="_blank">
-          <span  className="text-sm text-zinc-500">© 2024 Saheel Sarker</span>
+          <span  className="text-sm text-zinc-500">© 2026 Saheel Sarker</span>
         </a>
         {/* <div className="text-sm text-zinc-400">
           <ThemeSwitch />
