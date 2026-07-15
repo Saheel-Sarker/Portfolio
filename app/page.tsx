@@ -200,6 +200,11 @@ export default function Personal() {
             combining technical expertise with a vision for impactful,
             user-centric products.
           </p>
+          <p className="text-blue-700 dark:text-blue-400 mt-2">
+            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Check out my resume!
+            </Link>
+          </p>
         </div>
       </motion.section>
 
@@ -310,11 +315,11 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
-            <Link className="text-blue-700 dark:text-blue-300" href={`mailto:${EMAIL}`}>
+            <Link className="text-blue-700 dark:text-blue-400" href={`mailto:${EMAIL}`}>
               {EMAIL}
             </Link>
           {' '} or {' '}
-          <Link className="text-blue-700 dark:text-blue-300" href={`tel:${PHONE}`}>
+          <Link className="text-blue-700 dark:text-blue-400" href={`tel:${PHONE}`}>
               1-780-880-8416
             </Link>
           {' '} or the other ways below. I'd love a chance to connect with other like minded individuals.
