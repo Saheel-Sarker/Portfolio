@@ -78,7 +78,7 @@ export function Menu() {
   ];
 
   return (
-    <div className="sticky top-0 z-10 bg-zinc-100 dark:bg-zinc-950 w-full py-3.5 pb-2.25 border-b border-zinc-200 dark:border-zinc-800">
+    <div className="sticky top-0 z-10 bg-gray-200 dark:bg-zinc-950 w-full py-3.5 pb-2.25 border-b border-zinc-200 dark:border-zinc-800">
 
       <div className="pl-4 z-20">
         <button
@@ -107,7 +107,7 @@ export function Menu() {
             key={index}
             href={item.href}
             data-id={item.name}
-            className="inline-flex text-lg px-3 py-1 items-center justify-center text-zinc-500 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50 cursor-none hover:scale-105 hover:text-zinc-800 dark:hover:text-zinc-200 transition-all duration-100 ease-in-out"
+            className="inline-flex text-lg px-3 py-1 items-center justify-center text-zinc-700 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50 cursor-none hover:scale-105 hover:text-zinc-800 dark:hover:text-zinc-200 transition-all duration-100 ease-in-out"
           >
             {item.name}
           </a>
